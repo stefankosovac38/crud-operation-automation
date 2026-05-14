@@ -1,0 +1,30 @@
+{
+  "name": "crud-operation-automation",
+  "version": "0.1.0",
+  "description": "Generate framework-specific API clients from OpenAPI (Angular HttpClient, React, Vue) with version-aware output.",
+  "type": "module",
+  "bin": {
+    "crud-codegen": "./dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "node --import tsx src/cli.ts",
+    "gen": "node --import tsx src/cli.ts",
+    "generate": "node --import tsx src/cli.ts generate"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@apidevtools/swagger-parser": "^11.0.0",
+    "commander": "^12.1.0",
+    "semver": "^7.6.3",
+    "swagger2openapi": "^7.0.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "@types/semver": "^7.5.8",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}
